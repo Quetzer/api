@@ -8,15 +8,14 @@ export default class RssGenerator {
       .map((post) => {
         const item = `
           <item>
-            <title>${post.title}</title>
             <link>https://creativeblogger.org/posts/${post.slug}</link>
             <description><![CDATA[
             <div style="display: flex; align-items: center;">
              <div style="margin-right: 10px;">
-              <img src="${post.image}" alt="${post.title}" style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;">
+              <img src="${post.image}" alt="${post.image}" style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;">
              </div>
              <div>
-              <h2>${post.description}</h2>
+              <h2>${post.content}</h2>
              </div>
             </div>
             ]]>
